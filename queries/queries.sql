@@ -104,7 +104,7 @@ SELECT f.nombre AS 'fabricante', p.nombre AS 'producto' FROM fabricante f LEFT J
 SELECT f.nombre AS 'fabricante' FROM fabricante f LEFT JOIN producto p ON p.codigo_fabricante = f.codigo WHERE p.codigo_fabricante IS NULL;
 
 -- 36. Retorna tots els productes del fabricant Lenovo. (Sense utilitzar INNER JOIN).
-
+SELECT p.nombre FROM producto p LEFT JOIN fabricante f ON p.codigo_fabricante = f.codigo WHERE f.nombre = 'Lenovo';
 
 -- 37. Retorna totes les dades dels productes que tenen el mateix preu que el producte més car del fabricant Lenovo. (Sense usar INNER JOIN).
 
